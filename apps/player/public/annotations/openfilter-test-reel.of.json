@@ -1,0 +1,96 @@
+{
+  "schema": "https://openfilter.local/schema/v0.1",
+  "annotationId": "ofann_openfilter_test_reel_2026_06_30_v1",
+  "title": "OpenFilter Test Reel annotation",
+  "license": "CC0-1.0",
+  "createdAt": "2026-06-30T00:00:00.000Z",
+  "media": {
+    "title": "OpenFilter Test Reel",
+    "year": 2026,
+    "edition": "Generated 30 second fixture, 1280x720, 30 fps",
+    "runtimeMs": 30000,
+    "sourceUrl": "/media/openfilter-test-reel.mp4",
+    "fingerprints": {
+      "sourceId": "openfilter-test-reel-v1",
+      "durationMs": 30000,
+      "chapterStartsMs": [0, 10000, 20000],
+      "subtitleHash": "fixture-no-subtitles",
+      "videoHash": "generated-by-scripts/generate-sample-media.sh",
+      "audioHash": "generated-sine-wave"
+    }
+  },
+  "coverage": [
+    { "category": "language", "reviewed": true, "reviewer": "fixture-author" },
+    { "category": "blasphemy", "reviewed": true, "reviewer": "fixture-author" },
+    { "category": "sexual-content", "reviewed": true, "reviewer": "fixture-author" },
+    { "category": "violence", "reviewed": true, "reviewer": "fixture-author" },
+    { "category": "substance-use", "reviewed": true, "reviewer": "fixture-author" }
+  ],
+  "events": [
+    {
+      "id": "evt_language_001",
+      "startMs": 4200,
+      "endMs": 5700,
+      "category": "language",
+      "severity": 2,
+      "defaultAction": "mute",
+      "tags": ["mild-profanity"],
+      "note": "Fixture language cue, should mute when Language severity 2+ is enabled.",
+      "confidence": 1
+      ,
+      "source": "fixture"
+    },
+    {
+      "id": "evt_blasphemy_001",
+      "startMs": 8200,
+      "endMs": 9600,
+      "category": "blasphemy",
+      "severity": 3,
+      "defaultAction": "mute",
+      "tags": ["religious-profanity"],
+      "note": "Fixture blasphemy cue, separate from general language.",
+      "confidence": 1
+      ,
+      "source": "fixture"
+    },
+    {
+      "id": "evt_sexual_001",
+      "startMs": 12600,
+      "endMs": 15800,
+      "category": "sexual-content",
+      "severity": 4,
+      "defaultAction": "skip",
+      "tags": ["implied-sexual-content"],
+      "note": "Fixture scene skip cue.",
+      "confidence": 1
+      ,
+      "source": "fixture"
+    },
+    {
+      "id": "evt_substance_001",
+      "startMs": 18400,
+      "endMs": 20200,
+      "category": "substance-use",
+      "severity": 3,
+      "defaultAction": "skip",
+      "tags": ["alcohol"],
+      "note": "Fixture substance-use cue; disabled in the default profile.",
+      "confidence": 1
+      ,
+      "source": "fixture"
+    },
+    {
+      "id": "evt_violence_001",
+      "startMs": 23200,
+      "endMs": 26600,
+      "category": "violence",
+      "severity": 5,
+      "defaultAction": "skip",
+      "tags": ["graphic-violence"],
+      "note": "Fixture high-severity violence cue.",
+      "confidence": 1
+      ,
+      "source": "fixture"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "openfilter-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @openfilter/player",
+    "build": "npm run build -w @openfilter/core && npm run build -w @openfilter/annotator-cli && npm run build -w @openfilter/player",
+    "test": "npm run build -w @openfilter/core && npm run test -w @openfilter/core && npm run build -w @openfilter/annotator-cli && npm run test -w @openfilter/annotator-cli",
+    "fixture:media": "npm run fixture:media -w @openfilter/player"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.1"
+  }
+}

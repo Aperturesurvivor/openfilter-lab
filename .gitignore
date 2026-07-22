@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.DS_Store
+.env
+.env.*
+!.env.example
+.openfilter-work/
+*.of.json
+*.mp4
+*.mkv
+*.mov
+*.webm
+!apps/player/public/annotations/openfilter-test-reel.of.json
+!apps/player/public/media/openfilter-test-reel.mp4
