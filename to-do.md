@@ -2,7 +2,7 @@
 
 First milestone: local profanity filtering for one video. See [scope.md](scope.md). Tasks are unchecked until verified.
 
-- [ ] Audit existing annotation schema, CLI, player, and tests; identify what can be reused and document gaps.
+- [ ] Plan a likely rewrite for the first milestone, using existing work as reference where useful; decide the new structure and preserve prior work while developing.
 - [ ] Compare suitable locally runnable Whisper-based transcription options for word timestamps, installation, supported platforms, model licensing, speed, and resource requirements; choose and document one for the prototype.
 - [ ] Extract audio from a local video and transcribe it locally with estimated word timestamps. Document model setup and offline operation after downloads.
 - [ ] Match a user-configurable word list against transcript words and generate draft mute events, with adjustable boundary padding; save them in the sidecar format.
