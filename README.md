@@ -1,7 +1,33 @@
 # OpenFilter Lab
 
-OpenFilter Lab is a small architecture spike for a portable, offline
-VidAngel-style filtering system.
+OpenFilter Lab is an experimental architecture spike for a portable,
+self-hosted, VidAngel-style filtering system for videos people already have,
+including personal video files and media from DVDs.
+
+## Product vision
+
+The intended system has three connected parts:
+
+1. **Annotation toolkit:** Analyze a video using configurable AI tools and
+   user-provided API keys or local models, producing timestamped annotations
+   for categories such as language, sexual content, nudity, and violence. The
+   aim is a broad, user-configurable set of categories. Automated results need
+   review and do not guarantee complete coverage.
+2. **Playback and preferences:** Let viewers choose which categories or
+   severities to mute or skip while playing their own videos. A self-hosted
+   home-media integration, potentially a Jellyfin plugin, is one possible
+   direction; the integration and player are not yet decided.
+3. **Shared annotation catalog:** Let contributors publish and discover
+   annotation files so others can reuse work for the same video edition and
+   matching media. The system should check whether a file matches an annotation
+   before applying it. Disc editions, encodes, and timing differences make
+   reliable matching an open design problem; shared files should include
+   provenance and review coverage.
+
+These are goals, not completed features. Model providers, the category set,
+matching approach, hosting, and community review mechanisms remain to be
+specified. Local operation is a goal; optional external AI services require
+network access and may receive selected media data.
 
 The project record, motivation, and current limitations are documented at
 <https://josiahwilson.me/projects/openfilter-lab/>.
